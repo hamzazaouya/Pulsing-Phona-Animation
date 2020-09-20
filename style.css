@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #252525;
+    font-family: sans-serif
+}
+
+.pulsing {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    background-color: #4bcc00;
+    border-radius: 50%;
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:6rem;
+}
+
+.pulsing span {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    border: 3px solid #4bcc00;
+    border-radius: 50%;
+    animation: anm  1.5s infinite;
+}
+
+.pulsing span:last-of-type {
+    animation-delay: .4s
+}
+
+@keyframes anm {
+    0% {
+        transform: scale(1);
+    }
+    
+    100% {
+        transform: scale(1.6);
+        opacity: 0
+    }
+}
